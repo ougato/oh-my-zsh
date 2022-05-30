@@ -128,11 +128,11 @@ fi
 # Update upstream remote to ohmyzsh org
 git remote -v | while read remote url extra; do
   case "$url" in
-  https://gitee.com/pocmon/ohmyzsh(|.git))
-    git remote set-url "$remote" "https://gitee.com/pocmon/ohmyzsh.git"
+  http://gitlab.ougato.com:8880/ougato/oh-my-zsh(|.git))
+    git remote set-url "$remote" "http://gitlab.ougato.com:8880/ougato/oh-my-zsh.git"
     break ;;
-  git@gitee.com:pocmon/ohmyzsh(|.git))
-    git remote set-url "$remote" "git@gitee.com:pocmon/ohmyzsh.git"
+  git@gitlab.ougato.com:10012/ougato/oh-my-zsh(|.git))
+    git remote set-url "$remote" "ssh://git@gitlab.ougato.com:10012/ougato/oh-my-zsh.git"
     break ;;
   esac
 done

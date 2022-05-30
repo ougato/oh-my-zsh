@@ -42,8 +42,8 @@ custom_zsh=${ZSH:+yes}
 
 # Default settings
 ZSH=${ZSH:-~/.oh-my-zsh}
-REPO=${REPO:-pocmon/ohmyzsh}
-REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
+REPO=${REPO:-ougato/oh-my-zsh}
+REMOTE=${REMOTE:-http://gitlab.ougato.com:8880/${REPO}.git}
 BRANCH=${BRANCH:-master}
 
 # Other options

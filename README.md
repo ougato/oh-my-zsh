@@ -14,13 +14,13 @@
 ####  1.使用 curl
 
 ```shell
-sh -c "$(curl -fsSL https://gitee.com/pocmon/ohmyzsh/raw/master/tools/install.sh)"
+sh -c "$(curl -fsSL http://gitlab.ougato.com:8880/ougato/oh-my-zsh/-/raw/master/oh-my-zsh.sh)"
 ```
 
 ####  2.使用 wget
 
 ```shell
-sh -c "$(wget -O- https://gitee.com/pocmon/ohmyzsh/raw/master/tools/install.sh)"
+sh -c "$(wget -O- http://gitlab.ougato.com:8880/ougato/oh-my-zsh/-/raw/master/oh-my-zsh.sh)"
 ```
 
 ### 二、为安装及使用方便，修改3处：
@@ -28,8 +28,8 @@ sh -c "$(wget -O- https://gitee.com/pocmon/ohmyzsh/raw/master/tools/install.sh)"
 
 ```shell
 ZSH=${ZSH:-~/.oh-my-zsh}
-REPO=${REPO:-pocmon/ohmyzsh}
-REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
+REPO=${REPO:-ougato/oh-my-zsh}
+REMOTE=${REMOTE:-http://gitlab.ougato.com:8880/${REPO}.git}
 BRANCH=${BRANCH:-master}
 ```
 
@@ -38,11 +38,11 @@ BRANCH=${BRANCH:-master}
 ```shell
 git remote -v | while read remote url extra; do
   case "$url" in
-  https://gitee.com/pocmon/ohmyzsh(|.git))
-    git remote set-url "$remote" "https://gitee.com/pocmon/ohmyzsh.git"
+  http://gitlab.ougato.com:8880/ougato/oh-my-zsh(|.git))
+    git remote set-url "$remote" "http://gitlab.ougato.com:8880/ougato/oh-my-zsh.git"
     break ;;
-  git@gitee.com:pocmon/ohmyzsh(|.git))
-    git remote set-url "$remote" "git@gitee.com:pocmon/ohmyzsh.git"
+  git@gitlab.ougato.com:10012/ougato/oh-my-zsh(|.git))
+    git remote set-url "$remote" "ssh://git@gitlab.ougato.com:10012/ougato/oh-my-zsh.git"
     break ;;
   esac
 done
