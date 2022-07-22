@@ -1,11 +1,13 @@
-# 安装流程
+# CentOS 7
 
-## CentOS 7
+## 安装
 
 ```shell
-yum install -y git zsh
-git clone --depth 1 http://gitlab.ougato.com:8880/ougato/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-zsh
-chsh -s $(which zsh)
+/bin/bash -c "$(curl -fsSL https://file.ougato.com:8443/install/gogs.sh)" -s i
+```
+
+# 卸载
+
+```shell
+/bin/bash -c "$(curl -fsSL https://file.ougato.com:8443/install/gogs.sh)" -s r
 ```
